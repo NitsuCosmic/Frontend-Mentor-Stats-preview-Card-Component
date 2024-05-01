@@ -1,0 +1,132 @@
+/* font-family: "Inter", sans-serif;
+font-family: "Lexend Deca", sans-serif; */
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	min-height: 100svh;
+	background-color: hsl(233, 47%, 7%);
+}
+
+.section__hero {
+	overflow: hidden;
+	border-radius: 0.5rem;
+  max-width: 1100px;
+	background-color: hsl(244, 38%, 16%);
+}
+
+.hero__image-container {
+  position: relative;
+}
+
+.hero__image-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277, 100%, 25%, 0.5);
+}
+
+.image-container__mobile, .image-container__desktop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container__desktop {
+  display: none;
+}
+
+.hero__content {
+  font-size: 15px;
+	padding: 2rem 1.75em;
+	text-align: center;
+  flex-basis: 3;
+	color: hsl(0, 0%, 100%);
+	font-family: "Lexend Deca", sans-serif;
+}
+.content__heading {
+	font-size: 2em;
+	margin-bottom: 1.5rem;
+}
+
+.heading__emphasis {
+	color: hsl(277, 64%, 61%);
+}
+
+.content__description {
+  font-size: 1.1em;
+	margin-bottom: 1.5rem;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+.stats__stat {
+	margin-top: 1.5rem;
+}
+
+.stat__heading {
+  font-size: .75em;
+  text-transform: uppercase;
+	color: hsla(0, 0%, 100%, 0.6);
+}
+
+.attribution {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 1rem;
+	font-family: "Lexend Deca", sans-serif;
+	color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 620px) {
+  .section__hero {
+    display: flex;
+  }
+
+  .hero__image-container {
+    width: 100%;
+    order: 2;
+  }
+
+  .image-container__mobile {
+    display: none;
+  }
+
+  .image-container__desktop {
+    display: block;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    text-align: start;
+    width: 100%;
+  }
+
+  .content__heading {
+    margin-bottom: 1rem;
+    line-height: 1.25em;
+    font-size: 2.5em;
+  }
+
+  .content__description {
+    margin-right: 4rem;
+  }
+
+  .content__stats {
+    display: flex;
+    gap: 5rem;
+  }
+}
